@@ -86,16 +86,14 @@ public class SortByY {
         for (int i = 0; i < pts.length; i++) {
             int min = i;
             for (int j = i+1; j < pts.length; j++) {
-                if (compareByY(pts[j], pts[i]) < 0) {
+                if (compareByY(pts[min], pts[j]) > 0) {
                     min = j;
                 }
             }
             exch(pts, i, min);
 
+
         }
-
-
-
     }
 
     /** Swap pts[i] and pts[j]. (Given -- use it!) */
